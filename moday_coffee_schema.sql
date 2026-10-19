@@ -1,0 +1,58 @@
+﻿USE monday_coffee_db;
+GO
+
+DROP TABLE IF EXISTS sales;
+DROP TABLE IF EXISTS customers;
+DROP TABLE IF EXISTS products;
+DROP TABLE IF EXISTS city;
+GO
+
+
+CREATE TABLE city
+(
+    city_id INT PRIMARY KEY,
+    city_name VARCHAR(100),
+    population BIGINT,
+    estimated_rent DECIMAL(15, 2),
+    city_rank INT
+);
+GO
+
+
+CREATE TABLE products
+(
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(255),
+    price DECIMAL(10, 2)
+);
+GO
+
+
+CREATE TABLE customers
+(
+    customer_id INT PRIMARY KEY,
+    customer_name VARCHAR(255),
+    city_id INT,
+    CONSTRAINT fk_city
+        FOREIGN KEY (city_id)
+        REFERENCES city (city_id)
+);
+GO
+
+
+CREATE TABLE sales
+(
+    sale_id INT PRIMARY KEY,
+    sale_date DATE,
+    product_id INT,
+    customer_id INT,
+    total DECIMAL(10, 2),
+    rating INT,
+    CONSTRAINT fk_products
+        FOREIGN KEY (product_id)
+        REFERENCES products (product_id),
+    CONSTRAINT fk_customers
+        FOREIGN KEY (customer_id)
+        REFERENCES customers (customer_id)
+);
+GO
