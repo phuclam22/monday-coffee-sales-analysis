@@ -32,8 +32,6 @@ The analysis is structured into 5 strategic phases to simulate a real-world Busi
 
 ## Key Business Insights & Strategic Recommendations
 
-Instead of just reporting numbers, this analysis solves core business problems and provides actionable strategies for Monday Coffee's executive team:
-
 ### 1. Solving the Revenue Decline Paradox
 * **The Problem:** The MoM Sales Growth analysis (Q9) indicated a significant revenue drop in early 2024, raising alarms about customer churn.
 * **The Insight:** Advanced cohort analysis (Q11) revealed a staggering **99.6% customer retention rate** from 2023 to 2024. Customers did not abandon the brand; rather, their purchasing frequency and average basket size plummeted after the Q4 holiday season.
